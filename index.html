@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoria J&F</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/media-query.css"> -->
+    <!-- <script src="./js/scriptPopups.js" defer></script> -->
+    <!-- <script src="./js/scriptConexao.js" defer></script> -->
+    <script src="./js/tabela.js" defer></script>
+    <script src="./js/calendario.js" defer></script>
+    <script src="./js/popup.js" defer></script>
+    <script type="module" src="./js/scriptScript.js" defer></script>
+
+
+</head>
+
+<body>
+    <header id="header-pgn">
+        <div>
+            <img src="img/logo-instituto.webp" alt="Logo instituto j&f" id="logo-instituto">
+            <h1>GEDAI</h1>
+        </div>
+        <h1>Monitoria</h1>
+    </header>
+
+    <main class="main">
+        <section id="filtros">
+            <div class="selecaoSemana">
+                <label for="semana" id="data-label">Data da monitoria</label>
+                <input type="date" id="data" class="data-select">
+            </div>
+            <div id="container-serie-select">
+                <label for="serie" id="serie-label">Série</label>
+                <select name="serie" class="serie-select" id="serie-select">
+                </select>
+            </div>
+            <div id="container-disc-select">
+                <label for="disciplina" id="disc-label">Disciplina</label>
+                <select name="disc" class="disc-select">
+                </select>
+            </div>
+            <button type="submit" id="enviar">
+                Enviar
+            </button>
+        </section>
+
+        
+        <section>
+            <div id="div-legenda-semana">
+                <p>Clique nos dias para ver as monitorias disponíveis</p>
+            </div>
+            <div id="informacoes-popup">
+            <div id="form">
+                <header id="header-popup">
+                    <h1 id="titulo-popup">Preencha as informações</h1>
+                </header>
+        
+                <div id="selecoes-popup">
+                    <div>
+                        <label for="dia-semana" id="dia-semana-label">Dia da semana</label>
+                        <select name="dia-semana" class="dia-semana-select" id="dia-semana-select">
+                            <option value="" selected="true" hidden="true"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="horario" id="horario-label">Horário</label>
+                        <select name="horario" id="horario-select" class="horario-select">
+                            <option value="" selected="true" hidden="true"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="nome" id="nome">Nome</label>
+                        <input type="text" id="nome-input">
+                    </div>
+                    <div>
+                        <label for="email" id="email">Email</label>
+                        <input type="email" id="email-input">
+                    </div>
+                    <div id="container-btn-tabela">
+                        <p id="limpar">LIMPAR</p>
+                        <button id="marcar-monitoria">Marcar monitoria</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="cards">
+            </div> -->
+                
+                <div class="accordion">
+                    <div class="day" data-dia="segunda">
+                        <button class="accordion-button">Segunda-feira</button>
+                        <div class="panel" id="segunda-cards"></div>
+                    </div>
+                    <div class="day" data-dia="terca">
+                        <button class="accordion-button">Terça-feira</button>
+                        <div class="panel" id="terca-cards"></div>
+                    </div>
+                    <div class="day" data-dia="quarta">
+                        <button class="accordion-button">Quarta-feira</button>
+                        <div class="panel" id="quarta-cards"></div>
+                    </div>
+                    <div class="day" data-dia="quinta">
+                        <button class="accordion-button">Quinta-feira</button>
+                        <div class="panel" id="quinta-cards"></div>
+                    </div>
+                    <div class="day" data-dia="sexta">
+                        <button class="accordion-button">Sexta-feira</button>
+                        <div class="panel" id="sexta-cards"></div>
+                    </div>
+            </div>
+        </div>
+        </section>
+
+
+
+        
+    </main>
+</body>
+
+</html>
